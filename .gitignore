@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+pip-wheel-metadata/
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+*.ipynb_checkpoints/
+
+# Data files
+*.h5
+*.hdf5
+*.nc
+*.netcdf
+*.npz
+*.pkl
+*.pickle
+*.parquet
+*.feather
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Documentation
+docs/_build/
+docs/api/generated/
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docker
+.dockerignore
+!docker-compose.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Secrets
+*.key
+*.pem
+*.crt
+secrets/
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# TREEMOR specific
+data/
+models/
+output/
+cache/
+temp/
+
+# Large files
+*.tar.gz
+*.zip
+*.7z
+*.db
+*.sqlite
+*.sqlite3

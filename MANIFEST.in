@@ -1,0 +1,28 @@
+include README.md
+include LICENSE
+include NOTICE
+include CITATION.cff
+include AUTHORS.md
+include CHANGELOG.md
+include SECURITY.md
+include .env.example
+
+recursive-include treemor *.py
+recursive-include treomor *.pyi
+recursive-include treomor/config *.yaml
+recursive-include treomor/data *.nc *.h5
+
+recursive-include tests *.py
+recursive-include docs *.rst *.md
+
+exclude .gitlab-ci.yml
+exclude .pre-commit-config.yaml
+exclude .readthedocs.yaml
+exclude .dockerignore
+exclude Dockerfile
+exclude docker-compose.yml
+
+prune docs/_build
+prune __pycache__
+prune .pytest_cache
+prune .mypy_cache

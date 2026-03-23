@@ -1,0 +1,58 @@
+TREEMOR - Tree-Based Earth Motion Resonance
+Copyright (c) 2026 Samir Baladi
+
+This software includes third-party components:
+
+1. NumPy (BSD License)
+   Copyright (c) 2005-2024, NumPy Developers
+   https://numpy.org/
+
+2. SciPy (BSD License)
+   Copyright (c) 2001-2024, SciPy Developers
+   https://scipy.org/
+
+3. Pandas (BSD License)
+   Copyright (c) 2008-2024, AQR Capital Management, LLC, Lambda Foundry, Inc.
+   https://pandas.pydata.org/
+
+4. Xarray (Apache License 2.0)
+   Copyright (c) 2014-2024, Xarray Developers
+   https://xarray.dev/
+
+5. ObsPy (GNU Lesser General Public License v3)
+   Copyright (c) 2008-2024, ObsPy Developers
+   https://obspy.org/
+
+6. Scikit-learn (BSD License)
+   Copyright (c) 2007-2024, scikit-learn Developers
+   https://scikit-learn.org/
+
+7. Dash (MIT License)
+   Copyright (c) 2017-2024, Plotly
+   https://dash.plotly.com/
+
+8. Plotly (MIT License)
+   Copyright (c) 2012-2024, Plotly
+   https://plotly.com/
+
+9. Matplotlib (Matplotlib License - BSD-compatible)
+   Copyright (c) 2012-2024, Matplotlib Development Team
+   https://matplotlib.org/
+
+10. Click (BSD License)
+    Copyright (c) 2014, Armin Ronacher
+    https://click.palletsprojects.com/
+
+11. TQDM (MIT License)
+    Copyright (c) 2013, Noam Yorav-Raphael, et al.
+    https://tqdm.github.io/
+
+This software is distributed under the MIT License.
+See LICENSE for full terms.
+
+The TREEMOR research paper (DOI: 10.5281/zenodo.19183878) is licensed separately
+under Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+For additional attributions and acknowledgments, see:
+- AUTHORS.md
+- CITATION.cff

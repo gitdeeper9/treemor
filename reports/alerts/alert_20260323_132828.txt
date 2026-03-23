@@ -1,0 +1,22 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+⚠️ TREEMOR ALERT: EARTHQUAKE DETECTED
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Time: 2026-03-23 13:28:28
+Severity: WARNING
+Type: EARTHQUAKE
+----------------------------------------------------------------------
+Magnitude: M4.2
+Location: 47.6°N, 122.3°W
+Depth: 12 km
+Lead Time: 8.5 seconds before S-wave arrival
+Affected Sensors: PNW_023, PNW_015, PNW_041 (3 trees triggered)
+----------------------------------------------------------------------
+Recommended Actions:
+  • Prepare for shaking in 8-10 seconds
+  • Drop, Cover, and Hold On
+  • Secure hazardous materials
+  • Automated systems: shutdown initiated
+----------------------------------------------------------------------
+Dashboard: https://treomor.netlify.app/events
+Alert ID: TREEMOR_20260323_132828
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

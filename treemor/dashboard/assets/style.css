@@ -1,0 +1,120 @@
+/* TREEMOR Dashboard Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1a472a 0%, #0a2a1a 100%);
+    color: #e8f5e9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #81c784;
+}
+
+.header p {
+    font-size: 1.2em;
+    color: #c8e6c9;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #81c784;
+    border-bottom: 2px solid #81c784;
+    display: inline-block;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-active {
+    background-color: #4caf50;
+    box-shadow: 0 0 5px #4caf50;
+}
+
+.status-warning {
+    background-color: #ff9800;
+    box-shadow: 0 0 5px #ff9800;
+}
+
+.status-error {
+    background-color: #f44336;
+    box-shadow: 0 0 5px #f44336;
+}
+
+.metric {
+    font-size: 2em;
+    font-weight: bold;
+    color: #81c784;
+}
+
+.metric-label {
+    font-size: 0.9em;
+    color: #c8e6c9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #45a049;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #c8e6c9;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+a {
+    color: #81c784;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

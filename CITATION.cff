@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use TREEMOR in your research, please cite it using these metadata."
+title: "TREEMOR: Bio-Seismic Sensing & Planetary Infrasound Resonance"
+authors:
+  - family-names: "Baladi"
+    given-names: "Samir"
+    orcid: "https://orcid.org/0009-0003-8903-0029"
+    email: "gitdeeper@gmail.com"
+    affiliation: "Ronin Institute / Rite of Renaissance"
+doi: 10.5281/zenodo.19183878
+date-released: 2026-03-23
+version: 1.0.0
+repository-code: "https://github.com/gitdeeper9/treemor"
+url: "https://treemor.netlify.app"
+abstract: "TREEMOR (Tree-Based Earth Motion Resonance) is a revolutionary nine-parameter biomechanical seismology framework that transforms the world's forests into a planetary-scale distributed seismic monitoring network. It leverages the inherent mechanical sensitivity of living trees as natural vibration sensors, capable of detecting seismic P-waves, S-waves, surface waves, and atmospheric infrasound events through their structural resonance response."
+keywords:
+  - seismology
+  - earthquake detection
+  - infrasound
+  - forest monitoring
+  - bio-seismic sensing
+  - early warning system
+  - TREEMOR
+  - FSIN
+license: MIT
+type: software
+license-url: "https://opensource.org/licenses/MIT"
+commit: "v1.0.0"
+preferred-citation:
+  type: article
+  title: "TREEMOR: A Nine-Parameter Forest-Based Seismological Framework for Real-Time Earthquake Detection & Infrasonic Event Monitoring"
+  authors:
+    - family-names: "Baladi"
+      given-names: "Samir"
+  year: 2026
+  journal: "Seismological Research Letters"
+  doi: 10.5281/zenodo.19183878
+  url: "https://treemor.netlify.app/research-paper"

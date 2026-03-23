@@ -1,0 +1,48 @@
+======================================================================
+🌲 TREEMOR WEEKLY SUMMARY REPORT
+======================================================================
+Week: 2026-03-23 (Week 2026_12)
+Generated: 2026-03-23 13:28:28
+DOI: 10.5281/zenodo.19183878
+======================================================================
+
+📊 WEEKLY STATISTICS (Mar 17 - Mar 23, 2026)
+----------------------------------------
+Total Events:           14
+  Earthquakes:          11 (M2.5-M4.8)
+  Explosions:           2
+  Unknown:              1
+
+Average Daily Events:   2.0
+Peak Day:               March 22 (4 events)
+Lead Time Range:        3.2 - 12.8 seconds
+
+📡 NETWORK PERFORMANCE
+----------------------------------------
+Average Daily TSSI:     0.328
+Best Day:               March 21 (TSSI = 0.345)
+Sensor Utilization:     94%
+
+🏆 TOP PERFORMERS (Weekly)
+----------------------------------------
+  1. PNW_031: coast_live_oak | Avg TSSI = 0.358
+  2. PNW_007: ponderosa_pine | Avg TSSI = 0.331
+  3. PNW_015: douglas_fir | Avg TSSI = 0.318
+
+📈 WEEKLY TRENDS
+----------------------------------------
+• Detection rate stable at 91.7% (M≥3.5)
+• False alarm rate: 1.8%
+• Average lead time: 8.5 seconds
+
+💡 RECOMMENDATIONS
+----------------------------------------
+  ✓ Consider adding sensors in soil/sediment areas
+  ✓ Schedule calibration for low TSSI sensors
+  ✓ Review wind noise patterns for improved ADI
+
+======================================================================
+🌲 TREEMOR - When forests become Earth's sentinels
+📊 Dashboard: https://treomor.netlify.app
+📄 DOI: 10.5281/zenodo.19183878
+======================================================================

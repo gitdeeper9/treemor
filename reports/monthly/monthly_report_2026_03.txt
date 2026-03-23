@@ -1,0 +1,54 @@
+======================================================================
+🌲 TREEMOR MONTHLY ANALYSIS REPORT
+======================================================================
+Month: March 2026
+Generated: 2026-03-23 13:28:28
+DOI: 10.5281/zenodo.19183878
+======================================================================
+
+📊 MONTHLY STATISTICS (March 2026)
+----------------------------------------
+Total Events:           52
+  Earthquakes:          41 (M2.0-M5.2)
+  Explosions:           8
+  Unknown:              3
+
+Detection Rate:         91.7% (M≥3.5 within 200km)
+False Alarm Rate:       1.8%
+Average Lead Time:      9.2 seconds
+
+📡 NETWORK METRICS
+----------------------------------------
+Average TSSI:           0.322
+Network Uptime:         99.8%
+Sensor Availability:    94%
+
+🏆 TOP SENSORS (Monthly)
+----------------------------------------
+  1. PNW_031: coast_live_oak | TSSI = 0.358
+  2. PNW_007: ponderosa_pine | TSSI = 0.331
+  3. PNW_023: douglas_fir | TSSI = 0.316
+
+🌍 SIGNIFICANT EVENTS
+----------------------------------------
+  • Mar 22, 2026 - M4.8 Earthquake (12.3s lead time)
+  • Mar 18, 2026 - M4.2 Earthquake (8.5s lead time)
+  • Mar 15, 2026 - M3.9 Earthquake (6.2s lead time)
+
+📈 MONTHLY TRENDS
+----------------------------------------
+• Increasing detection confidence (+2.3%)
+• Improved wind noise filtering (-5% false alarms)
+• Stable network performance
+
+🎯 GOALS FOR NEXT MONTH
+----------------------------------------
+  • Expand network to 10+ sensors
+  • Improve TSSI to >0.35 average
+  • Integrate InSAR satellite data
+
+======================================================================
+🌲 TREEMOR - When forests become Earth's sentinels
+📊 Dashboard: https://treomor.netlify.app
+📄 DOI: 10.5281/zenodo.19183878
+======================================================================

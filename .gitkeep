@@ -1,0 +1,7 @@
+# This file ensures empty directories are tracked in git
+# Directories that use .gitkeep:
+# - treomor/data/validation/
+# - treomor/data/config/
+# - treomor/models/
+# - docs/source/_static/
+# - tests/fixtures/

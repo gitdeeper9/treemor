@@ -1,0 +1,53 @@
+======================================================================
+🌲 TREEMOR DAILY MONITORING REPORT
+======================================================================
+Date: 2026-03-23
+Time: 13:09:59
+DOI: 10.5281/zenodo.19183878
+======================================================================
+
+📡 NETWORK STATUS
+----------------------------------------
+Total Sensors:     6
+Active Sensors:    6
+Average TSSI:      0.322
+Network Health:    MODERATE
+
+🏔️ SOIL TYPE DISTRIBUTION
+----------------------------------------
+  bedrock: 3 sensors
+  soil: 2 sensors
+  sediment: 1 sensors
+
+⚠️ EVENTS SUMMARY
+----------------------------------------
+Total Events:      2
+  Earthquakes:     2
+  Explosions:      0
+
+Event Details:
+----------------------------------------
+  1. 2026-03-23 08:23:45
+     Type: EARTHQUAKE | Magnitude: 4.2 | Lead Time: 8.5s
+  2. 2026-03-23 14:12:03
+     Type: EARTHQUAKE | Magnitude: 3.8 | Lead Time: 6.2s
+
+🏆 TOP 5 SENSORS (by TSSI)
+----------------------------------------
+  1. PNW_031: coast_live_oak | TSSI = 0.358
+  2. PNW_007: ponderosa_pine | TSSI = 0.331
+  3. PNW_015: douglas_fir | TSSI = 0.318
+  4. PNW_023: douglas_fir | TSSI = 0.316
+  5. PNW_041: redwood | TSSI = 0.312
+
+🩺 SYSTEM HEALTH
+----------------------------------------
+Report Generated:   2026-03-23T13:09:59.610371
+Data Integrity:     OK
+Storage Status:     Active
+
+======================================================================
+🌲 TREEMOR - When forests become Earth's sentinels
+📊 Dashboard: https://treomor.netlify.app
+📄 DOI: 10.5281/zenodo.19183878
+======================================================================

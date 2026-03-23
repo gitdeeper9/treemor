@@ -1,0 +1,194 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # TREEMOR Dashboard
+  # ============================================
+  dashboard:
+    build: .
+    image: treemor:latest
+    container_name: treemor-dashboard
+    restart: unless-stopped
+    ports:
+      - "8050:8050"
+      - "9090:9090"
+    environment:
+      - TREEMOR_DATA_DIR=/data/treemor
+      - DASHBOARD_HOST=0.0.0.0
+      - DASHBOARD_PORT=8050
+      - DASHBOARD_DEBUG=false
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=treemor
+      - DB_USER=treemor
+      - DB_PASSWORD=${DB_PASSWORD:-treemor_pass}
+    volumes:
+      - treemor_data:/data/treemor
+      - ./config:/app/config:ro
+    depends_on:
+      - postgres
+      - timescaledb
+    networks:
+      - treemor_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8050/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ============================================
+  # PostgreSQL (Event Catalog)
+  # ============================================
+  postgres:
+    image: postgres:15-alpine
+    container_name: treemor-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=treemor
+      - POSTGRES_USER=treemor
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-treemor_pass}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - treemor_network
+
+  # ============================================
+  # TimescaleDB (Time-Series Sensor Data)
+  # ============================================
+  timescaledb:
+    image: timescale/timescaledb:2.12-pg15
+    container_name: treomor-timescaledb
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=treomor_ts
+      - POSTGRES_USER=treomor
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-treomor_pass}
+    volumes:
+      - timescaledb_data:/var/lib/postgresql/data
+      - ./database/timescale_init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5433:5432"
+    networks:
+      - treomor_network
+
+  # ============================================
+  # Redis (Caching)
+  # ============================================
+  redis:
+    image: redis:7-alpine
+    container_name: treomor-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - treomor_network
+
+  # ============================================
+  # Nginx (Reverse Proxy)
+  # ============================================
+  nginx:
+    image: nginx:alpine
+    container_name: treomor-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/ssl:/etc/nginx/ssl:ro
+      - static_files:/usr/share/nginx/html
+    depends_on:
+      - dashboard
+    networks:
+      - treomor_network
+
+  # ============================================
+  # Prometheus (Metrics)
+  # ============================================
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: treomor-prometheus
+    restart: unless-stopped
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus_data:/prometheus
+    ports:
+      - "9091:9090"
+    networks:
+      - treomor_network
+
+  # ============================================
+  # Grafana (Visualization)
+  # ============================================
+  grafana:
+    image: grafana/grafana:latest
+    container_name: treomor-grafana
+    restart: unless-stopped
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-admin}
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards:ro
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources:ro
+    ports:
+      - "3000:3000"
+    networks:
+      - treomor_network
+    depends_on:
+      - prometheus
+
+  # ============================================
+  # Jupyter Lab (Research & Analysis)
+  # ============================================
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: treomor-jupyter
+    restart: unless-stopped
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - NB_USER=treomor
+      - NB_UID=1000
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - treomor_data:/data/treomor:ro
+    ports:
+      - "8888:8888"
+    networks:
+      - treomor_network
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+
+# ============================================
+# Volumes
+# ============================================
+volumes:
+  treomor_data:
+    driver: local
+  postgres_data:
+    driver: local
+  timescaledb_data:
+    driver: local
+  redis_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  static_files:
+    driver: local
+
+# ============================================
+# Networks
+# ============================================
+networks:
+  treomor_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
